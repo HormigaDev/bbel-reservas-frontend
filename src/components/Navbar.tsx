@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { companionName } from "@/app.data.json";
 import { usePathname } from "next/navigation";
 import SessionService from "@/services/sessionService";
+import makeStyles from "@/utils/MakeStyles";
 
 const Navbar: React.FC = () => {
     const pathname = usePathname();
@@ -31,7 +32,7 @@ const Navbar: React.FC = () => {
 
     return (
         <nav
-            className={`transition-colors duration-300 p-4 fixed top-0 w-full z-10 ease-in-out ${
+            className={`transition-colors duration-300 ease-in-out p-4 fixed top-0 w-full z-10 ${
                 isScrolled ? "bg-burgundy shadow-lg" : "bg-transparent"
             }`}
         >
@@ -40,18 +41,30 @@ const Navbar: React.FC = () => {
                     <Link href="/">{companionName}</Link>
                 </div>
                 <ul className="flex space-x-10">
-                    {options.map((option, key) => (
-                        <li key={key}>
-                            <Link
-                                href={option.path}
-                                className={`text-champagne hover:text-gold ${
-                                    pathname === option.path ? "font-bold" : ""
-                                }`}
-                            >
-                                {option.label}
-                            </Link>
-                        </li>
-                    ))}
+                    {options.map((option, key) => {
+                        const isActive = {
+                            condition: pathname === option.path,
+                            onTrue: "font-bold text-gold",
+                            onFalse: "",
+                        };
+                        return (
+                            <li key={key}>
+                                <Link
+                                    href={option.path}
+                                    className={makeStyles([
+                                        "text-champagne",
+                                        "hover:text-gold",
+                                        "transition-colors",
+                                        "duration-200",
+                                        "ease-in-out",
+                                        isActive,
+                                    ])}
+                                >
+                                    {option.label}
+                                </Link>
+                            </li>
+                        );
+                    })}
                 </ul>
             </div>
         </nav>
