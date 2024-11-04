@@ -1,21 +1,40 @@
 "use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { companionName } from "@/app.data.json";
 import { usePathname } from "next/navigation";
+import SessionService from "@/services/sessionService";
 
 const Navbar: React.FC = () => {
     const pathname = usePathname();
+    const authenticated = SessionService.isAuthenticated();
     const options: { label: string; path: string }[] = [
         { label: "Inicio", path: "/" },
         { label: "Reservar mesa", path: "/reserve" },
         { label: "Menú", path: "/menu" },
-        { label: "Mi cuenta", path: "/myaccount" },
         { label: "Contacto", path: "/contact" },
+        { label: authenticated ? "Mi cuenta" : "Entrar", path: "/myaccount" },
     ];
+    const [isScrolled, setIsScrolled] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
-        <nav className="bg-burgundy p-4">
+        <nav
+            className={`transition-colors duration-300 p-4 fixed top-0 w-full z-10 ease-in-out ${
+                isScrolled ? "bg-burgundy shadow-lg" : "bg-transparent"
+            }`}
+        >
             <div className="container mx-auto flex justify-between items-center">
                 <div className="text-champagne text-2xl font-bold">
                     <Link href="/">{companionName}</Link>
@@ -25,7 +44,7 @@ const Navbar: React.FC = () => {
                         <li key={key}>
                             <Link
                                 href={option.path}
-                                className={`text-champagne hover:text-goldy ${
+                                className={`text-champagne hover:text-gold ${
                                     pathname === option.path ? "font-bold" : ""
                                 }`}
                             >
