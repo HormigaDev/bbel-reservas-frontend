@@ -1,12 +1,14 @@
+'use client';
+
 class SessionService {
-    private static tokenKey = "authToken";
+    private static tokenKey = 'authToken';
 
     public static saveToken(token: string): void {
         localStorage.setItem(this.tokenKey, token);
     }
 
     public static getToken(): string {
-        const token = localStorage.getItem(this.tokenKey) ?? "";
+        const token = localStorage.getItem(this.tokenKey) ?? '';
         return token;
     }
 
