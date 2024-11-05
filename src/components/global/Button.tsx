@@ -5,6 +5,7 @@ interface ButtonProps {
     onClick?: () => void;
     disabled?: boolean;
     type?: string;
+    className?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -12,6 +13,7 @@ const Button: React.FC<ButtonProps> = ({
     onClick,
     disabled = false,
     type = 'primary',
+    className = '',
 }) => {
     return (
         <button
@@ -29,6 +31,7 @@ const Button: React.FC<ButtonProps> = ({
                         'hover:bg-burgundy hover:text-purewhite',
                     ],
                 },
+                className,
             ])}
             onClick={onClick}
         >
