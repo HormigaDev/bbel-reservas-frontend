@@ -42,7 +42,7 @@ const PreviewMenu: React.FC = () => {
                         key={key}
                         className={makeStyles([
                             'pl-4 pr-4 pt-2 pb-4',
-                            'border border-burgundy w-full',
+                            'border border-copper w-full',
                             'rounded',
                         ])}
                     >
