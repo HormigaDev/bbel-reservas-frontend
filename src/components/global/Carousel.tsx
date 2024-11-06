@@ -1,49 +1,25 @@
 import makeStyles from '@/utils/MakeStyles';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Button from './Button';
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6';
 
 const Carousel: React.FC<{ children: React.ReactNode; className?: string }> = ({
     children,
     className = '',
 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [prevAnimate, setPrevAnimate] = useState({
-        index: 0,
-        animating: false,
-    });
-    const [nextAnimate, setNextAnimate] = useState({
-        index: 0,
-        animating: false,
-    });
+    const [prevAnimate, setPrevAnimate] = useState(0);
+    const [nextAnimate, setNextAnimate] = useState(0);
+    const [direction, setDirection] = useState('left');
     const slides = React.Children.toArray(children);
 
-    const nexSlide = () => {
-        setCurrentIndex((prevIndex) => {
-            setPrevAnimate({ index: prevIndex, animating: true });
-            return (prevIndex + 1) % slides.length;
-        });
-        setNextAnimate({
-            index: currentIndex,
-            animating: nextAnimate.animating,
-        });
+    const nexSlide = (direction: string) => {
+        setPrevAnimate(currentIndex);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+        setNextAnimate((currentIndex + 1) % slides.length);
+        setDirection(direction);
     };
-
-    const handlePrevAnimation = () => {
-        setPrevAnimate({ index: prevAnimate.index, animating: false });
-        setNextAnimate((nAnimate) => {
-            nAnimate.animating = true;
-            return nAnimate;
-        });
-    };
-    const handleNextAnimation = () => {
-        setNextAnimate({ index: nextAnimate.index, animating: false });
-    };
-
-    useEffect(() => {
-        const intervalId = setInterval(nexSlide, 5000);
-        return () => clearInterval(intervalId);
-    });
 
     return (
         <div
@@ -54,48 +30,60 @@ const Carousel: React.FC<{ children: React.ReactNode; className?: string }> = ({
                 className,
             ])}
         >
+            <Button
+                className="float-left mt-16 z-[100]"
+                onClick={() => nexSlide('right')}
+            >
+                <FaAngleLeft />
+            </Button>
+            <Button
+                className="float-right mt-16 z-[100]"
+                onClick={() => nexSlide('left')}
+            >
+                <FaAngleRight />
+            </Button>
             <div className="flex justify-center items-center">
-                <Button label="<" className="" />
-                <Button label=">" />
                 {slides.map((slide, key) => {
-                    const isNext = nextAnimate.index === key;
-                    const isPrev = prevAnimate.index === key;
-                    const opacity = isNext ? 0 : 1;
-                    const opacityTo = isNext ? 1 : 0;
-                    const position = isNext ? '100%' : '0%';
-                    const positionTo = isNext ? '0%' : '-100%';
-
-                    console.log(isNext);
+                    const isNext = nextAnimate === key;
+                    const isPrev = prevAnimate === key;
+                    const transformTo = direction === 'right' ? '50%' : '-100%';
+                    const transformFrom =
+                        direction === 'right' ? '-100%' : '50%';
 
                     return (
-                        <>
-                            {((isNext && nextAnimate.animating) ||
-                                (isPrev && prevAnimate.animating)) && (
+                        <React.Fragment key={key}>
+                            {isPrev && (
                                 <motion.div
-                                    key={key}
                                     initial={{
-                                        opacity,
-                                        transform: `translateX(${position})`,
+                                        opacity: 1,
+                                        transform: 'translateX(-50%)',
                                     }}
                                     animate={{
-                                        opacity: opacityTo,
-                                        transform: `translateX(${positionTo})`,
+                                        opacity: 0,
+                                        transform: `translateX(${transformTo})`,
+                                        zIndex: -1,
                                     }}
-                                    transition={{ duration: 0.5 }}
-                                    className={makeStyles([
-                                        'h-64 max-w-xl',
-                                        'relative',
-                                    ])}
-                                    onAnimationComplete={
-                                        isNext
-                                            ? handleNextAnimation
-                                            : handlePrevAnimation
-                                    }
+                                    className="absolute h-64 max-w-xl left-[50%] top-0"
                                 >
                                     {slide}
                                 </motion.div>
                             )}
-                        </>
+                            {isNext && (
+                                <motion.div
+                                    initial={{
+                                        opacity: 0,
+                                        transform: `translateX(${transformFrom})`,
+                                    }}
+                                    animate={{
+                                        opacity: 1,
+                                        transform: 'translateX(-50%)',
+                                    }}
+                                    className="absolute h-64 max-w-xl left-[50%] top-0"
+                                >
+                                    {slide}
+                                </motion.div>
+                            )}
+                        </React.Fragment>
                     );
                 })}
             </div>

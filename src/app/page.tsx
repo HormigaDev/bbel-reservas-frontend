@@ -3,6 +3,7 @@ import AboutUs from '@/components/landingPage/AboutUs';
 import Features from '@/components/landingPage/Features';
 import PreviewMenu from '@/components/landingPage/PreviewMenu';
 import Testimonials from '@/components/landingPage/Testimonials';
+import Footer from '@/components/landingPage/Footer';
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <Features />
             <PreviewMenu />
             <Testimonials />
+            <Footer />
         </div>
     );
 }

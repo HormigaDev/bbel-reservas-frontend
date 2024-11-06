@@ -1,19 +1,28 @@
 import makeStyles from '@/utils/MakeStyles';
+import React from 'react';
 
+enum IconPosition {
+    Left = 'left',
+    Right = 'right',
+}
 interface ButtonProps {
-    label: string;
+    label?: string;
     onClick?: () => void;
     disabled?: boolean;
     type?: string;
     className?: string;
+    iconPosition?: IconPosition;
+    children?: React.ReactNode;
 }
 
 const Button: React.FC<ButtonProps> = ({
-    label,
+    label = '',
     onClick,
     disabled = false,
     type = 'primary',
     className = '',
+    iconPosition = IconPosition.Left,
+    children,
 }) => {
     return (
         <button
@@ -35,7 +44,9 @@ const Button: React.FC<ButtonProps> = ({
             ])}
             onClick={onClick}
         >
+            {iconPosition === IconPosition.Left && children}
             {label}
+            {iconPosition === IconPosition.Right && children}
         </button>
     );
 };
