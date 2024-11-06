@@ -29,7 +29,7 @@ const Markdown: React.FC<MarkdownProps> = ({ filepath }) => {
         };
 
         fetchMarkdown(filepath);
-    });
+    }, [setContentHtml, filepath]);
 
     return (
         <>
