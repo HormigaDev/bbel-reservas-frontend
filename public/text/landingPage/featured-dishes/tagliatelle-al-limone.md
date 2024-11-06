@@ -1,0 +1,1 @@
+**Tagliatelle al Limone con Gamberi e Zucchine** – Pasta fresca tagliatelle en una salsa ligera de limón, acompañada de camarones salteados y finas rodajas de calabacín. Un plato elegante y fresco, perfecto para una cena especial llena de sabor y sutileza.

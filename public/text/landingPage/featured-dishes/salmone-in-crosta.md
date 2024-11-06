@@ -1,0 +1,1 @@
+**Salmone in Crosta di Pistacchio con Purè di Cavolfiore al Tartufo** – Un delicado filete de salmón con una crujiente costra de pistachos, acompañado de un puré suave de coliflor infusionado con aceite de trufa. Perfectamente equilibrado en texturas y sabores para una experiencia gastronómica inolvidable.

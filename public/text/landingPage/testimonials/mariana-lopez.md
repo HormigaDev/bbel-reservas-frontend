@@ -1,0 +1,1 @@
+La experiencia en este restaurante fue verdaderamente excepcional. La atmósfera íntima y elegante, combinada con un servicio impecable, creó el entorno perfecto para una cena romántica. El plato de salmón a la plancha, acompañado de un puré de espárragos, fue un deleite para los sentidos. Sin duda, un lugar que recomiendo para una velada inolvidable.

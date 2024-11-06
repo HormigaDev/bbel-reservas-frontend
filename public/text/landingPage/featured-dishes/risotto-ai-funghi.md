@@ -1,0 +1,1 @@
+**Risotto ai Funghi Porcini e Tartufo Nero** – Un risotto cremoso elaborado con hongos porcini frescos y un toque de trufa negra. La textura suave y el aroma intenso hacen de este plato una opción sofisticada y reconfortante para una velada romántica.
