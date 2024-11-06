@@ -19,6 +19,12 @@ const Footer: React.FC = () => {
         { Icon: FaEnvelope, label: 'reservar@bbelreserved.com' },
     ];
 
+    const footerLinks: { label: string; url: string }[] = [
+        { label: 'Términos y condiciones', url: '#' },
+        { label: 'Política de privacidad', url: '#' },
+        { label: 'Política de reservas', url: '#' },
+    ];
+
     return (
         <section
             className={makeStyles([
@@ -52,6 +58,8 @@ const Footer: React.FC = () => {
                                 'text-4xl',
                                 'tooltip',
                                 'relative',
+                                'tooltip-champagne',
+                                'tooltip-text-burgundy',
                             ])}
                             data-description={label}
                         >
@@ -62,26 +70,21 @@ const Footer: React.FC = () => {
             </div>
             <Line className="w-[80%] bg-champagne m-auto" />
             <div className="text-center">
-                <Link
-                    href="#"
-                    className="mr-2 hover:text-gold transition-colors duration-200"
-                >
-                    Términos y condiciones
-                </Link>
-                <span className="text-greydark">|</span>
-                <Link
-                    href="#"
-                    className="ml-2 mr-2 hover:text-gold transition-colors duration-200"
-                >
-                    Política de privacidad
-                </Link>
-                <span className="text-greydark">|</span>
-                <Link
-                    href="#"
-                    className="ml-2 hover:text-gold transition-colors duration-200"
-                >
-                    Política de reservas
-                </Link>
+                <span className="ml-4 mr-4">|</span>
+                {footerLinks.map(({ label, url }, key: number) => (
+                    <>
+                        <Link
+                            key={`f-link${key}`}
+                            href={url}
+                            className="hover:text-gold transition-colors duration-200"
+                        >
+                            {label}
+                        </Link>
+                        <span className="ml-4 mr-4" key={key}>
+                            |
+                        </span>
+                    </>
+                ))}
             </div>
             <div className="text-center mt-12">
                 <small className="text-thin">
