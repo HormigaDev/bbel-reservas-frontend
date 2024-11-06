@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 
+const shadow = '0 0 12px ';
 const config: Config = {
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -20,6 +21,17 @@ const config: Config = {
                 gold: '#d4af37',
                 marfil: '#faf3e0',
                 purewhite: '#fafafa',
+            },
+            boxShadow: {
+                burgundy: shadow + '#800020',
+                burgunlight: shadow + '#aa0030',
+                champagne: shadow + '#f7e7ce',
+                copper: shadow + '#b87333',
+                greygrey: shadow + '#333333',
+                greydark: shadow + '#222222',
+                gold: shadow + '#d4af37',
+                marfil: shadow + '#faf3e0',
+                purewhite: shadow + '#fafafa',
             },
         },
     },
