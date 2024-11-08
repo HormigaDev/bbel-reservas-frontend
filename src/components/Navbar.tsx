@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
         { label: 'Contacto', path: '/contact' },
         {
             label: authenticated ? 'Mi cuenta' : 'Entrar',
-            path: '/myaccount',
+            path: authenticated ? '/myaccount' : '/auth/login',
             icon: FaRightToBracket,
         },
     ];

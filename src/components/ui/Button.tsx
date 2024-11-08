@@ -1,11 +1,12 @@
 import makeStyles from '@/utils/MakeStyles';
 import React from 'react';
+import ColorInterface from '@/interfaces/ColorInterface';
 
 enum IconPosition {
     Left = 'left',
     Right = 'right',
 }
-interface ButtonProps {
+interface ButtonProps extends ColorInterface {
     label?: string;
     onClick?: () => void;
     disabled?: boolean;
@@ -23,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({
     className = '',
     iconPosition = IconPosition.Left,
     children,
+    color = 'burgundy',
 }) => {
     return (
         <button
@@ -32,13 +34,12 @@ const Button: React.FC<ButtonProps> = ({
                     condition: disabled,
                     onTrue: 'opacity-40',
                 },
+                `bg-${color}`,
+                `hover:bg-${color}light`,
                 {
                     condition: type === 'primary',
-                    onTrue: 'bg-burgundy text-purewhite hover:bg-burgunlight',
-                    onFalse: [
-                        'bg-gold text-greydark',
-                        'hover:bg-burgundy hover:text-purewhite',
-                    ],
+                    onTrue: 'text-purewhite',
+                    onFalse: ['bg-gold text-greygreylight'],
                 },
                 className,
             ])}

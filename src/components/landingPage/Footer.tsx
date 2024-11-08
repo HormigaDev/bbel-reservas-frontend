@@ -8,7 +8,7 @@ import {
     FaWhatsapp,
     FaEnvelope,
 } from 'react-icons/fa6';
-import Line from '../global/Line';
+import Line from '../ui/Line';
 
 const Footer: React.FC = () => {
     const socialWeb: { Icon: IconType; label: string }[] = [
