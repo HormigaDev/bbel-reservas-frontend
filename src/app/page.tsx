@@ -1,3 +1,5 @@
+'use client';
+
 import MainContent from '@/components/landingPage/MainContent';
 import AboutUs from '@/components/landingPage/AboutUs';
 import Features from '@/components/landingPage/Features';

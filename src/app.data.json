@@ -1,4 +1,5 @@
 {
     "companionName": "BBEL Reserved",
-    "email": "bbelreserved@bbel.com"
+    "email": "bbelreserved@bbel.com",
+    "API_URL": "http://localhost:4000"
 }

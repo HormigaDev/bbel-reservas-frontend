@@ -1,3 +1,4 @@
+import React from 'react';
 import makeStyles from '@/utils/MakeStyles';
 import Link from 'next/link';
 import { IconType } from 'react-icons';
@@ -8,7 +9,7 @@ import {
     FaWhatsapp,
     FaEnvelope,
 } from 'react-icons/fa6';
-import Line from '../global/Line';
+import Line from '../ui/Line';
 
 const Footer: React.FC = () => {
     const socialWeb: { Icon: IconType; label: string }[] = [
@@ -60,6 +61,7 @@ const Footer: React.FC = () => {
                                 'relative',
                                 'tooltip-champagne',
                                 'tooltip-text-burgundy',
+                                'tooltip-top',
                             ])}
                             data-description={label}
                         >
@@ -72,7 +74,7 @@ const Footer: React.FC = () => {
             <div className="text-center">
                 <span className="ml-4 mr-4">|</span>
                 {footerLinks.map(({ label, url }, key: number) => (
-                    <>
+                    <React.Fragment key={key}>
                         <Link
                             key={`f-link${key}`}
                             href={url}
@@ -83,7 +85,7 @@ const Footer: React.FC = () => {
                         <span className="ml-4 mr-4" key={key}>
                             |
                         </span>
-                    </>
+                    </React.Fragment>
                 ))}
             </div>
             <div className="text-center mt-12">

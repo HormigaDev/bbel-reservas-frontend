@@ -1,6 +1,6 @@
 import makeStyles from '@/utils/MakeStyles';
 import React from 'react';
-import Button from '../global/Button';
+import Button from '../ui/Button';
 
 const MainContent: React.FC = () => {
     return (

@@ -1,8 +1,8 @@
 'use client';
 
 import makeStyles from '@/utils/MakeStyles';
-import Carousel from '../global/Carousel';
-import Markdown from '../global/Markdown';
+import Carousel from '../ui/Carousel';
+import Markdown from '../ui/Markdown';
 
 const Testimonials: React.FC = () => {
     return (
