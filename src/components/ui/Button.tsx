@@ -10,7 +10,6 @@ interface ButtonProps extends ColorInterface {
     label?: string;
     onClick?: () => void;
     disabled?: boolean;
-    type?: string;
     className?: string;
     iconPosition?: IconPosition;
     children?: React.ReactNode;
@@ -18,14 +17,17 @@ interface ButtonProps extends ColorInterface {
 
 const Button: React.FC<ButtonProps> = ({
     label = '',
-    onClick,
+    onClick = () => {},
     disabled = false,
-    type = 'primary',
     className = '',
     iconPosition = IconPosition.Left,
     children,
     color = 'burgundy',
 }) => {
+    const handleClick = (e: React.PointerEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        onClick();
+    };
     return (
         <button
             className={makeStyles([
@@ -34,16 +36,12 @@ const Button: React.FC<ButtonProps> = ({
                     condition: disabled,
                     onTrue: 'opacity-40',
                 },
+                'text-purewhite',
                 `bg-${color}`,
                 `hover:bg-${color}light`,
-                {
-                    condition: type === 'primary',
-                    onTrue: 'text-purewhite',
-                    onFalse: ['bg-gold text-greygreylight'],
-                },
                 className,
             ])}
-            onClick={onClick}
+            onClick={handleClick}
         >
             {iconPosition === IconPosition.Left && children}
             {label}

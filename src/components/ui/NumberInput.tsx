@@ -1,23 +1,16 @@
+'use client';
+
+import ColorInterface from '@/interfaces/ColorInterface';
 import formatInput from '@/utils/formatInput';
-import generateId from '@/utils/generateId';
 import makeStyles from '@/utils/MakeStyles';
 import { useState } from 'react';
 import { FaAsterisk } from 'react-icons/fa6';
 
-interface NumberInputProps {
+interface NumberInputProps extends ColorInterface {
     type?: 'integer' | 'float';
     defaultValue?: number;
     decimals?: number;
     required?: boolean;
-    color?:
-        | 'burgundy'
-        | 'champagne'
-        | 'copper'
-        | 'gold'
-        | 'greygrey'
-        | 'greydark'
-        | 'marfil'
-        | 'purewhite';
     shadow?: boolean;
     updater?: (value: number) => void;
     outline?: boolean;
@@ -35,14 +28,15 @@ const NumberInput: React.FC<NumberInputProps> = ({
     updater = (value: number) => value,
     className = '',
 }) => {
-    const inputId = generateId();
     const [inputValue, setInputValue] = useState(String(defaultValue));
+    const [isFocused, setIsFocused] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.target.value);
     };
 
     const filterNumber = () => {
+        setIsFocused(false);
         if (inputValue === '') {
             setInputValue(
                 (0).toFixed(type === 'float' ? decimals : 0).replace('.', ',')
@@ -66,8 +60,8 @@ const NumberInput: React.FC<NumberInputProps> = ({
 
     const classes = makeStyles([
         'rounded-md',
-        { condition: shadow, onTrue: `shadow-${color}` },
-        'bg-transparent',
+        { condition: shadow && isFocused, onTrue: `shadow-${color}` },
+        { condition: outline, onTrue: 'bg-transparent' },
         `text-${color}`,
         `placeholder-${color}`,
         'placeholder-opacity-50',
@@ -97,12 +91,12 @@ const NumberInput: React.FC<NumberInputProps> = ({
             ])}
         >
             <input
-                name={inputId}
                 value={inputValue}
                 className={classes}
                 onChange={handleChange}
                 onKeyDown={handleKeyDown}
                 onBlur={filterNumber}
+                onFocus={() => setIsFocused(true)}
             />
             {required && (
                 <div

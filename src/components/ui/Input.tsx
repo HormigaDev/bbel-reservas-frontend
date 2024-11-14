@@ -2,9 +2,9 @@
 
 import makeStyles from '@/utils/MakeStyles';
 import { useState } from 'react';
-import generateId from '@/utils/generateId';
 import { FaAsterisk } from 'react-icons/fa6';
 import applyMask from '@/utils/applyMask';
+import ColorInterface from '@/interfaces/ColorInterface';
 
 enum InputTypes {
     Text = 'text',
@@ -16,17 +16,8 @@ enum InputTypes {
     Float = 'float',
 }
 
-interface InputProps {
+interface InputProps extends ColorInterface {
     type?: 'text' | 'email' | 'date' | 'time' | 'textarea' | 'password';
-    color?:
-        | 'burgundy'
-        | 'champagne'
-        | 'copper'
-        | 'gold'
-        | 'greygrey'
-        | 'greydark'
-        | 'marfil'
-        | 'purewhite';
     shadow?: boolean;
     placeholder?: string;
     required?: boolean;
@@ -53,10 +44,11 @@ const Input: React.FC<InputProps> = ({
     mask = '*',
 }) => {
     if (!pattern) pattern = /^.*$/;
-    const inputId = generateId();
     const [inputValue, setInputValue] = useState(defaultValue);
+    const [isFocused, setIsFocused] = useState(false);
 
     const filterDate = () => {
+        setIsFocused(false);
         if (inputValue === '') {
             setInputValue('');
             return;
@@ -76,6 +68,7 @@ const Input: React.FC<InputProps> = ({
     };
 
     const filterEmail = () => {
+        setIsFocused(false);
         const email: string = inputValue;
         const emailRegex =
             /^[\w\.-]+@[a-zA-Z\d-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$/;
@@ -96,9 +89,11 @@ const Input: React.FC<InputProps> = ({
         }
         setInputValue(time);
         update(time);
+        setIsFocused(false);
     };
 
     const filterText = () => {
+        setIsFocused(false);
         const text = applyMask(
             inputValue,
             pattern.test(inputValue) ? '*' : mask
@@ -148,7 +143,6 @@ const Input: React.FC<InputProps> = ({
 
     const classes = makeStyles([
         'rounded-md',
-        { condition: shadow, onTrue: `shadow-${color}` },
         'bg-transparent',
         `text-${color}`,
         `placeholder-${color}`,
@@ -162,7 +156,8 @@ const Input: React.FC<InputProps> = ({
             className={makeStyles([
                 'mt-2 mb-2 bg-marfil',
                 'border-2',
-                `border-${color}`,
+                { condition: shadow && isFocused, onTrue: `shadow-${color}` },
+                'border-' + color + 'light',
                 'rounded p-1 px-2',
                 'flex flex-col',
                 'h-9',
@@ -182,8 +177,8 @@ const Input: React.FC<InputProps> = ({
             {type === InputTypes.Textarea ? (
                 <textarea
                     className={classes}
-                    name={inputId}
                     value={inputValue}
+                    onFocus={() => setIsFocused(true)}
                     onChange={handleChange}
                     onBlur={handleFunction}
                     onKeyDown={handleKeyDown}
@@ -191,14 +186,15 @@ const Input: React.FC<InputProps> = ({
                 ></textarea>
             ) : (
                 <input
-                    name={inputId}
                     value={inputValue}
                     onChange={handleChange}
+                    onFocus={() => setIsFocused(true)}
                     onBlur={handleFunction}
                     onKeyDown={handleKeyDown}
                     className={classes}
                     placeholder={placeholder}
                     type={type === 'password' ? 'password' : 'text'}
+                    autoComplete="new-password"
                 />
             )}
             {required && (
@@ -206,6 +202,7 @@ const Input: React.FC<InputProps> = ({
                     className={makeStyles([
                         'absolute top-0 right-0 m-2',
                         `text-${color}`,
+                        'text-xs',
                     ])}
                 >
                     <FaAsterisk />
