@@ -1,0 +1,1 @@
+Las **tostadas de aguacate con tomate y ajo** son un aperitivo simple pero lleno de sabor, que se sirve en pan crujiente con una capa de aguacate, rodajas de tomate fresco y un toque de ajo y aceite de oliva. Esta mezcla es ligera, deliciosa y perfecta para eventos informales o cenas de estilo relajado.

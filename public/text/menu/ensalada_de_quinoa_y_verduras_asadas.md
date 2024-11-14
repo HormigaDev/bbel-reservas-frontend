@@ -1,0 +1,1 @@
+La **ensalada de quinoa y verduras asadas** es un plato lleno de nutrientes, donde la quinoa se combina con zanahorias, calabacines, pimientos y otras verduras asadas. Todo se mezcla con aceite de oliva, limón y hierbas frescas, creando un plato saludable y sabroso, ideal para aquellos que buscan una opción vegetariana y nutritiva.

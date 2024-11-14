@@ -1,0 +1,1 @@
+El **Tartare d'Avocat et Mangue** es una versión fresca y deliciosa del clásico tartar francés. Se combinan cubos de aguacate maduro con mango en dados, sazonados con cebollín, cilantro, un toque de limón y aceite de oliva. La combinación dulce y salada hace que este plato sea refrescante y delicioso, ideal para una entrada ligera y colorida.
