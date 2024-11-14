@@ -6,16 +6,6 @@ import { FaAsterisk } from 'react-icons/fa6';
 import applyMask from '@/utils/applyMask';
 import ColorInterface from '@/interfaces/ColorInterface';
 
-enum InputTypes {
-    Text = 'text',
-    Email = 'email',
-    Date = 'date',
-    Time = 'time',
-    Textarea = 'textarea',
-    Integer = 'integer',
-    Float = 'float',
-}
-
 interface InputProps extends ColorInterface {
     type?: 'text' | 'email' | 'date' | 'time' | 'textarea' | 'password';
     shadow?: boolean;
@@ -109,13 +99,13 @@ const Input: React.FC<InputProps> = ({
     let handleFunction: () => void;
 
     switch (type) {
-        case InputTypes.Date:
+        case 'date':
             handleFunction = filterDate;
             break;
-        case InputTypes.Email:
+        case 'email':
             handleFunction = filterEmail;
             break;
-        case InputTypes.Time:
+        case 'time':
             handleFunction = filterTime;
             break;
         default:
@@ -174,7 +164,7 @@ const Input: React.FC<InputProps> = ({
                 className,
             ])}
         >
-            {type === InputTypes.Textarea ? (
+            {type === 'textarea' ? (
                 <textarea
                     className={classes}
                     value={inputValue}

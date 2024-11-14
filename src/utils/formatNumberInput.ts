@@ -1,4 +1,4 @@
-function formatInput(value: string, decimals: number): string {
+function formatNumberInput(value: string, decimals: number): string {
     const MAX_SAFE_INTEGER = 9007199254740991;
     const MIN_SAFE_INTEGER = -9007199254740991;
     const MAX_FLOAT = Number.MAX_VALUE;
@@ -27,4 +27,4 @@ function formatInput(value: string, decimals: number): string {
     return String((0).toFixed(decimals).replace('.', ','));
 }
 
-export default formatInput;
+export default formatNumberInput;

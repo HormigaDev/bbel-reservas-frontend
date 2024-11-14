@@ -1,37 +1,5 @@
 import type { Config } from 'tailwindcss';
 
-const prefixs = [
-    'shadow',
-    'bg',
-    'text',
-    'focus:shadow',
-    'focus:text',
-    'focus:bg',
-    'hover:bg',
-    'hover:text',
-    'hover:shadow',
-    'placeholder',
-];
-
-const colors = [
-    'burgundy',
-    'champagne',
-    'marfil',
-    'purewhite',
-    'copper',
-    'gold',
-    'greygrey',
-    'greydark',
-];
-
-const safelist = [];
-for (const color of colors) {
-    for (const prefix of prefixs) {
-        safelist.push(`${prefix}-${color}`);
-        safelist.push(`${prefix}-${color}light`);
-    }
-}
-
 const shadow = '0 0 12px ';
 const config: Config = {
     content: [

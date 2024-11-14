@@ -77,14 +77,12 @@ export default function Login() {
         label: string;
         field: string;
         type: 'email' | 'password';
-        required?: boolean;
     }[][] = [
         [
             {
                 label: 'Correo electrónico',
                 field: 'email',
                 type: 'email',
-                required: true,
             },
         ],
         [
@@ -92,7 +90,6 @@ export default function Login() {
                 label: 'Contraseña',
                 field: 'password',
                 type: 'password',
-                required: true,
             },
         ],
     ];
@@ -139,7 +136,7 @@ export default function Login() {
                                     type={data.type}
                                     update={handleChange(data.field)}
                                     color="gold"
-                                    required={data.required}
+                                    required
                                     shadow
                                 />
                             </div>

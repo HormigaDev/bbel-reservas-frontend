@@ -1,7 +1,7 @@
 'use client';
 
 import ColorInterface from '@/interfaces/ColorInterface';
-import formatInput from '@/utils/formatInput';
+import formatNumberInput from '@/utils/formatNumberInput';
 import makeStyles from '@/utils/MakeStyles';
 import { useState } from 'react';
 import { FaAsterisk } from 'react-icons/fa6';
@@ -46,7 +46,7 @@ const NumberInput: React.FC<NumberInputProps> = ({
         }
         const toFixed: number =
             type === 'integer' ? 0 : type === 'float' ? decimals : 0;
-        const number: string = formatInput(inputValue, toFixed);
+        const number: string = formatNumberInput(inputValue, toFixed);
 
         setInputValue(number);
         updater(Number(number.replace(',', '.')));

@@ -98,15 +98,13 @@ export default function Register() {
         type: 'text' | 'email' | 'date' | 'time' | 'textarea' | 'password';
         pattern?: RegExp;
         mask?: string;
-        required?: boolean;
     }[][] = [
         [
-            { label: 'Nombre', field: 'name', type: 'text', required: true },
+            { label: 'Nombre', field: 'name', type: 'text', },
             {
                 label: 'Correo electrónico',
                 field: 'email',
                 type: 'email',
-                required: true,
             },
         ],
         [
@@ -114,13 +112,11 @@ export default function Register() {
                 label: 'Contraseña',
                 field: 'password',
                 type: 'password',
-                required: true,
             },
             {
                 label: 'Confirmar contraseña',
                 field: 'confirmPassword',
                 type: 'password',
-                required: true,
             },
         ],
         [
@@ -130,7 +126,6 @@ export default function Register() {
                 type: 'text',
                 mask: '(####) #######',
                 pattern: /^\(0?\d{3}\)?\s?\d{7}$/,
-                required: true,
             },
         ],
     ];
@@ -179,7 +174,7 @@ export default function Register() {
                                     mask={data.mask ?? '*'}
                                     pattern={data.pattern}
                                     color="gold"
-                                    required={data.required}
+                                    required
                                     shadow
                                 />
                             </div>
