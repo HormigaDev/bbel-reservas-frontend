@@ -1,0 +1,1 @@
+La **paella de verduras** es una versión sin mariscos ni carne de este icónico plato español. Se prepara con arroz, calabacines, pimientos, alcachofas, guisantes y tomates, todo cocido lentamente con azafrán y caldo. La combinación de verduras frescas y el arroz es deliciosa y ligera, haciendo de este plato una excelente opción para aquellos que buscan una comida vegetariana.

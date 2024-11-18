@@ -1,0 +1,38 @@
+[
+    {
+        "id": "tarte_tatin_aux_pommes",
+        "title": "Tarte Tatin aux Pommes"
+    },
+    {
+        "id": "creme_brulee_a_la_vanille",
+        "title": "Crème Brûlée à la Vanille"
+    },
+    {
+        "id": "mochi_con_helado",
+        "title": "Mochi con helado"
+    },
+    {
+        "id": "pastel_tres_leches",
+        "title": "Pasterl Tres Leches"
+    },
+    {
+        "id": "kulfi_de_pistacho",
+        "title": "Kulfi de Pistacho"
+    },
+    {
+        "id": "tiramisu_al_caffe",
+        "title": "Tiramisù al Caffè"
+    },
+    {
+        "id": "baklava_de_nueces",
+        "title": "Baklava de Nueces"
+    },
+    {
+        "id": "pavlova_con_frutas_frescas",
+        "title": "Pavlova con frutas frescas"
+    },
+    {
+        "id": "gateau_au_chocolat_fondant",
+        "title": "Gâteau au Chocolat Fondant"
+    }
+]

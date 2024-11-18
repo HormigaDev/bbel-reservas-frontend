@@ -1,0 +1,1 @@
+Este **risotto aux champignons et asperges** es un plato cremoso y lleno de sabor, preparado con arroz Arborio, champiñones y espárragos frescos. El arroz se cocina lentamente, absorbiendo los sabores del caldo, y se mezcla con queso parmesano para darle un toque cremoso y delicioso. Este plato es perfecto para quienes prefieren opciones vegetarianas sin sacrificar sabor.

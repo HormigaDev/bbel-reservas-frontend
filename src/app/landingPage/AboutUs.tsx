@@ -1,7 +1,7 @@
 'use client';
 
 import makeStyles from '@/utils/MakeStyles';
-import Markdown from '../ui/Markdown';
+import Markdown from '../../components/ui/Markdown';
 import { FaChampagneGlasses } from 'react-icons/fa6';
 
 const AboutUs: React.FC = () => {

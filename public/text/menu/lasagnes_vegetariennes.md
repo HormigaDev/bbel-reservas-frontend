@@ -1,0 +1,1 @@
+Las **lasagnes végétariennes** son una versión sin carne del clásico italiano. Se preparan con capas de pasta, salsa de tomate, verduras como espinacas, berenjenas, champiñones y calabacines, además de una mezcla de quesos como mozzarella y ricotta. Esta lasaña es una opción rica, sabrosa y sustanciosa para aquellos que buscan una comida sin carne pero igualmente deliciosa.

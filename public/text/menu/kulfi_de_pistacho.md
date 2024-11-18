@@ -1,0 +1,1 @@
+El **Kulfi** es un helado tradicional indio, más denso que el helado convencional y preparado con leche endulzada y espesa. El sabor a pistacho le da un toque único y exótico, mientras que su textura es cremosa y refrescante. Este postre es perfecto para acompañar una comida con sabores especiados.

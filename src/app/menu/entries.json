@@ -1,0 +1,38 @@
+[
+    {
+        "id": "bruschetta_al_pomodoro",
+        "title": "Bruschetta al Pomodoro"
+    },
+    {
+        "id": "ceviche_vegetariano",
+        "title": "Ceviche Vegetariano"
+    },
+    {
+        "id": "tartare_d_avocat_et_mangue",
+        "title": "Tartare d'Avocat et Mangue"
+    },
+    {
+        "id": "salade_caprese",
+        "title": "Salade Caprese"
+    },
+    {
+        "id": "corba_de_salatalik_ve_yogurt",
+        "title": "Çorba de Salatalık ve Yoğurt"
+    },
+    {
+        "id": "empanadas_de_espinaca_y_queso",
+        "title": "Empanadas de Espinaca y Queso"
+    },
+    {
+        "id": "tenpura",
+        "title": "Tenpura"
+    },
+    {
+        "id": "tostadas_de_aguacate_tomate_y_ajo",
+        "title": "Tostadas de Aguacate con Tomate y Ajo"
+    },
+    {
+        "id": "ensalada_de_quinoa_y_verduras_asadas",
+        "title": "Ensalada de Quinoa y verduras asadas"
+    }
+]

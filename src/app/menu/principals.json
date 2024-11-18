@@ -1,0 +1,38 @@
+[
+    {
+        "id": "risotto_aux_champignons_et_asperges",
+        "title": "Risotto aux Champignons et Asperges"
+    },
+    {
+        "id": "lasagnes_vegetariennes",
+        "title": "Lasagnes Végétariennes"
+    },
+    {
+        "id": "curry_de_garbanzos",
+        "title": "Curry de Garbanzos con Arroz"
+    },
+    {
+        "id": "pasta_al_pesto",
+        "title": "Pasta al Pesto Genovese"
+    },
+    {
+        "id": "paella_de_verduras",
+        "title": "Paella de Verduras"
+    },
+    {
+        "id": "aubergines_farcies_au_quinoa_et_tomates",
+        "title": "Aubergines Farcies au Quinoa et Tomates"
+    },
+    {
+        "id": "tacos_de_frijoles_negros_y_maiz",
+        "title": "Tacos de Frijoles Negros y Maíz"
+    },
+    {
+        "id": "cannelonis_aux_epinards_et_ricotta",
+        "title": "Cannelonis aux Épinards et Ricotta"
+    },
+    {
+        "id": "falafel_avec_salade_au_tahini",
+        "title": "Falafel avec Salade au Tahini"
+    }
+]

@@ -1,0 +1,1 @@
+La **pasta al pesto** es uno de los platos más famosos de la cocina italiana, hecha con una salsa de albahaca fresca, piñones, ajo, aceite de oliva y queso parmesano. El pesto se mezcla con la pasta para ofrecer un sabor fresco y aromático. Este plato es perfecto para aquellos que buscan algo ligero pero lleno de sabor, ideal para una comida informal o una cena rápida.

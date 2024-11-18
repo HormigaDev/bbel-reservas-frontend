@@ -1,0 +1,1 @@
+La **Pavlova** es un postre ligero y delicado de merengue crujiente por fuera y suave por dentro, coronado con crema batida y frutas frescas como fresas, kiwis y moras. Este postre es ideal para quienes buscan un final ligero y refrescante para su comida.
