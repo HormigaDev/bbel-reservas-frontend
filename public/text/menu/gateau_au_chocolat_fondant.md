@@ -1,0 +1,1 @@
+El **Gâteau au Chocolat Fondant** es un pastel de chocolate denso y decadente, que al cortarse revela un centro ligeramente fundido y suave. Es perfecto para los amantes del chocolate que buscan una experiencia rica y satisfactoria para finalizar su cena.

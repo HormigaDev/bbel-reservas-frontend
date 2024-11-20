@@ -1,0 +1,1 @@
+El **curry de garbanzos** es un plato típico de la cocina india, que se cocina con una mezcla de especias como el comino, cúrcuma y garam masala, junto con garbanzos y tomate. Se sirve sobre arroz basmati para equilibrar los sabores. Este plato es picante, aromático y lleno de sabor, ideal para los amantes de la comida india y las opciones vegetarianas.

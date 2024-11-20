@@ -1,0 +1,1 @@
+La **Crème Brûlée** es un postre clásico francés, caracterizado por una crema suave y aromatizada con vainilla, cubierto con una capa de azúcar caramelizado que crea un contraste crujiente y delicioso al romperse con la cuchara. Este postre es elegante y suave, ideal para cerrar una cena romántica o un evento especial.

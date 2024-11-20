@@ -1,0 +1,1 @@
+La **Baklava** es un postre turco compuesto por capas de hojaldre relleno de nueces y endulzado con un sirope suave. El contraste entre la textura crujiente y la dulzura del relleno hace de este un postre sofisticado y satisfactorio, ideal para quienes disfrutan de postres intensos.

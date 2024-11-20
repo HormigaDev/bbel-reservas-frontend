@@ -1,0 +1,1 @@
+El **Pastel Tres Leches** es un bizcocho húmedo y esponjoso que se empapa en una mezcla de leche evaporada, leche condensada y crema. Tiene una textura rica y un sabor suave que es muy apreciado en América Latina. Este postre es perfecto para quienes prefieren sabores suaves y una textura cremosa.

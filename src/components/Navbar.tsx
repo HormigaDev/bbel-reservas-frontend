@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [setIsScrolled, setUserLetter, setAuthenticated]);
 
     const handleLogout = () => {
         SessionService.logout();

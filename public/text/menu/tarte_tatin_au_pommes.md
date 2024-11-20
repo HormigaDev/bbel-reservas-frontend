@@ -1,0 +1,1 @@
+La **Tarte Tatin aux Pommes** es un postre clásico y reconfortante, preparado con manzanas caramelizadas cubiertas por una capa de masa crujiente. Se sirve caliente, con un toque de crema fresca. Este postre es ideal para aquellos que buscan algo dulce pero no demasiado pesado.

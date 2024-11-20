@@ -1,0 +1,1 @@
+La **Salade Caprese** es un plato sencillo pero exquisito, preparado con rodajas de tomate fresco, mozzarella de búfala, albahaca, aceite de oliva y un toque de sal. Esta combinación de sabores frescos y suaves resalta los ingredientes naturales, ofreciendo una entrada ligera y sabrosa que combina bien con cualquier comida.

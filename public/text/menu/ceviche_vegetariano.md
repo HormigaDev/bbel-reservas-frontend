@@ -1,0 +1,1 @@
+El **Ceviche vegetariano** es una reinterpretación fresca y sabrosa del clásico peruano. En lugar de pescado, se utiliza una mezcla de vegetales frescos como pepinos, tomates y pimientos, marinados en jugo de limón y acompañados de cebolla morada y cilantro. Este ceviche ofrece una opción refrescante y ligera, ideal para quienes prefieren opciones sin carne.

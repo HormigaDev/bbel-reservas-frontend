@@ -1,6 +1,6 @@
 import makeStyles from '@/utils/MakeStyles';
 import Image from 'next/image';
-import Markdown from '../ui/Markdown';
+import Markdown from '../../components/ui/Markdown';
 
 const PreviewMenu: React.FC = () => {
     const basePath = 'landingPage/featured-dishes/';

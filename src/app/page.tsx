@@ -1,11 +1,11 @@
 'use client';
 
-import MainContent from '@/components/landingPage/MainContent';
-import AboutUs from '@/components/landingPage/AboutUs';
-import Features from '@/components/landingPage/Features';
-import PreviewMenu from '@/components/landingPage/PreviewMenu';
-import Testimonials from '@/components/landingPage/Testimonials';
-import Footer from '@/components/landingPage/Footer';
+import MainContent from '@/app/landingPage/MainContent';
+import AboutUs from '@/app/landingPage/AboutUs';
+import Features from '@/app/landingPage/Features';
+import PreviewMenu from '@/app/landingPage/PreviewMenu';
+import Testimonials from '@/app/landingPage/Testimonials';
+import Footer from '@/app/landingPage/Footer';
 
 export default function Home() {
     return (

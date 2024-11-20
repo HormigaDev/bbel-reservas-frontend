@@ -1,0 +1,1 @@
+El **falafel** es una croqueta frita hecha a base de garbanzos y especias como el comino y el cilantro. Se sirve con una ensalada fresca de pepino, tomate, cebolla y aderezo de tahini, creando una comida saludable y llena de sabor. Es una excelente opción para los comensales que prefieren platos vegetarianos o veganos.

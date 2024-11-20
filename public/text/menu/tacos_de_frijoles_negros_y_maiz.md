@@ -1,0 +1,1 @@
+Los **tacos de frijoles negros y maíz** son una deliciosa opción sin carne, en la que los frijoles negros se mezclan con maíz, cebolla, cilantro y salsa de tomate. Todo se sirve en tortillas de maíz y se acompaña de una rodaja de aguacate. Este plato es sabroso y satisfactorio, ideal para una comida informal o una cena ligera.

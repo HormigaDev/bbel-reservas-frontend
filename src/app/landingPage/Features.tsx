@@ -5,7 +5,7 @@ import { FaChampagneGlasses, FaUtensils } from 'react-icons/fa6';
 import { FaCoffee } from 'react-icons/fa';
 import { PiChefHatBold } from 'react-icons/pi';
 import { IconType } from 'react-icons';
-import Markdown from '../ui/Markdown';
+import Markdown from '../../components/ui/Markdown';
 
 const Features: React.FC = () => {
     const basePath = 'landingPage/features/';

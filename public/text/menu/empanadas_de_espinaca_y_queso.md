@@ -1,0 +1,1 @@
+Las **empanadas de espinaca y queso** son una deliciosa opción vegetariana de la tradicional empanada argentina. Estas empanadas están rellenas con una mezcla de espinacas cocidas, cebolla y queso, todo envuelto en una masa crujiente. Este plato es ideal para servir como aperitivo o entrante en reuniones informales o cenas más relajadas.

@@ -1,0 +1,1 @@
+El **Houmous** es un puré de garbanzos, tahini, aceite de oliva y limón, que se sirve acompañado de pan de pita recién horneado. Este plato es ideal para compartir, ya que es delicioso, saludable y lleno de sabor. Además, es una opción perfecta para aquellos que siguen una dieta vegetariana o vegana, siendo fresco y nutritivo.

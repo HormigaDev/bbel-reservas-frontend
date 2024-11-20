@@ -1,0 +1,1 @@
+El **Mochi con Helado** es un postre japonés que combina una masa de arroz suave y elástica con un relleno de helado en el centro. Viene en sabores variados como té verde, mango y frambuesa. Este postre es refrescante y ligero, perfecto para quienes buscan un dulce único y exótico.

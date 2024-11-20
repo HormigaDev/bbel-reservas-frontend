@@ -1,0 +1,1 @@
+Los **Cannelonis aux épinards et ricotta** están rellenos con una mezcla de espinacas frescas y queso ricotta, cubiertos con una rica salsa de tomate y queso gratinado. Este plato es perfecto para aquellos que buscan una opción vegetariana deliciosa y reconfortante, ideal para compartir en cenas familiares o eventos especiales.
