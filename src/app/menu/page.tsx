@@ -10,6 +10,11 @@ import { useState } from 'react';
 
 export default function Menu() {
     const [tab, setTab] = useState('entries');
+    const menuOptions: { label: string; value: string }[] = [
+        { label: 'Entradas', value: 'entries' },
+        { label: 'Platos principales', value: 'principals' },
+        { label: 'Postres', value: 'desserts' },
+    ];
 
     return (
         <div>
@@ -23,15 +28,22 @@ export default function Menu() {
                 ])}
             >
                 <div className={makeStyles(['text-burgundy bg-marfil pt-16'])}>
-                    <Item color="burgundy" onClick={() => setTab('entries')}>
-                        Entradas
-                    </Item>
-                    <Item color="burgundy" onClick={() => setTab('principals')}>
-                        Platos principales
-                    </Item>
-                    <Item color="burgundy" onClick={() => setTab('desserts')}>
-                        Postres
-                    </Item>
+                    {menuOptions.map((option, key) => (
+                        <Item
+                            key={`menu-option-${key}`}
+                            color="burgundy"
+                            onClick={() => setTab(option.value)}
+                            className={makeStyles([
+                                {
+                                    condition: tab === option.value,
+                                    onTrue: 'bg-burgundy text-purewhite',
+                                    onFalse: 'bg-transparent',
+                                },
+                            ])}
+                        >
+                            {option.label}
+                        </Item>
+                    ))}
                 </div>
                 <div className="text-burgundy">
                     {tab === 'entries' && <Grid data={entries} />}

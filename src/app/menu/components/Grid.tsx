@@ -1,4 +1,5 @@
 import Markdown from '@/components/ui/Markdown';
+import Button from '@/components/ui/Button';
 import makeStyles from '@/utils/MakeStyles';
 import Image from 'next/image';
 
@@ -31,10 +32,8 @@ const Grid: React.FC<GridProps> = ({ data = [] }) => {
                         'h-full',
                         'rounded',
                         'p-4',
+                        'pb-16',
                         'relative',
-                        'transition-transform',
-                        'hover:translate-y-[-5%]',
-                        'hover:z-[1]',
                     ])}
                 >
                     <div className="relative w-full h-48">
@@ -52,6 +51,12 @@ const Grid: React.FC<GridProps> = ({ data = [] }) => {
                         filepath={`menu/${element.id}`}
                         className="pb-2"
                     />
+                    <Button
+                        color="burgundy"
+                        className="float-end w-[60%] left-1/2 bottom-[12px] absolute -translate-x-1/2"
+                    >
+                        Ordenar
+                    </Button>
                 </div>
             ))}
         </div>

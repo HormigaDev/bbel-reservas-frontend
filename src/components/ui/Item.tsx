@@ -25,7 +25,6 @@ const Item: React.FC<ItemProps> = ({
                 'transition-colors',
                 'duration-300',
                 'ease',
-                'bg-transparent',
                 'cursor-pointer',
                 'select-none',
             ])}
